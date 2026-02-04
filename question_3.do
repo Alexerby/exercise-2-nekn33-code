@@ -1,7 +1,7 @@
 
 // *********************************
 //
-// Question 3: Plotting relationship GDP ~ prot + latitude
+// Question 3:  Regr: log(GDP) ~ prot + latitude
 //
 // *********************************
 

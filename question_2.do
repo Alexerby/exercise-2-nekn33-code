@@ -1,6 +1,6 @@
 // *********************************
 //
-// Question 2: High-Quality Plotting
+// Question 2:  Regr & plotting: log(GDP) ~ prot
 //
 // *********************************
 
@@ -13,19 +13,19 @@ use "exercise_2.dta", clear
 
 regress lgdp prot
 
-// Improved Plotting Code
+// Plotting
 twoway (scatter lgdp prot, 
-        mlabel(shortnam) 
-        mlabsize(vsmall)                // Smaller text for cleaner look
-        mlabposition(3)                 // Place labels to the right of dots
-        msymbol(circle_hollow)          // Hollow circles look more academic
-        mcolor(black)) ///              // Professional black/white style
+        mlabel(shortnam)
+        mlabsize(vsmall)
+        mlabposition(3)
+        msymbol(circle_hollow)
+        mcolor(black))
        (lfit lgdp prot, lcolor(black) lwidth(medium)),
     title("Relationship between Property Rights and GDP", size(medium)) 
     xtitle("Protection Against Expropriation (Average 1985-1995)")
     ytitle("Log GDP per capita (1995)")
     legend(order(1 "Countries" 2 "OLS Regression Line") region(lcolor(none)))
-    graphregion(color(white))           // Remove gray background
+    graphregion(color(white))
     plotregion(color(white))
 
 // Export
